@@ -1,19 +1,35 @@
-# Alzator
+<p align="center">
+  <img src="docs/banner.png" alt="Alzator: same product, five Alza shops, one table in CZK" width="100%">
+</p>
 
-**Is the same product cheaper on Alza in another country?** Alzator answers that right on the product page.
+<p align="center">
+  <a href="#install"><img src="https://img.shields.io/badge/Chrome-install%20in%201%20minute-1e3a8a?logo=googlechrome&logoColor=white" alt="Install in Chrome"></a>
+  <img src="https://img.shields.io/badge/Manifest-V3-16a34a" alt="Manifest V3">
+  <img src="https://img.shields.io/badge/shops-CZ%20%C2%B7%20SK%20%C2%B7%20DE%20%C2%B7%20AT%20%C2%B7%20HU-0b1530" alt="Shops: CZ, SK, DE, AT, HU">
+  <img src="https://img.shields.io/badge/tracking-none-16a34a" alt="No tracking">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-94a3b8" alt="MIT license"></a>
+</p>
+
+<h1 align="center">
+  <img src="docs/logo.svg" alt="" width="40" align="center"> Alzator
+</h1>
+
+<p align="center"><b>Is the same product cheaper on Alza in another country?</b><br>Alzator answers that right on the product page.</p>
 
 Open any product on [alza.cz](https://www.alza.cz), [alza.sk](https://www.alza.sk), [alza.de](https://www.alza.de), [alza.at](https://www.alza.at) or [alza.hu](https://www.alza.hu). Alzator adds a small table under the buy buttons with the price on every Alza shop, converted to CZK at today's Czech National Bank rate.
 
-```
-Price on other Alza shops
-Shop                      Anonymous     My price   With AlzaPlus+    Diff
-alza.at  regional variant  CZK 27,527   CZK 27,527              -   -22.5 %
-alza.de  regional variant  CZK 27,650   CZK 27,650              -   -22.2 %
-alza.cz                    CZK 42,211   CZK 39,490     CZK 35,541
-alza.hu  regional variant  CZK 39,893   CZK 39,893              -   +12.2 %
-alza.sk                    CZK 43,580   CZK 43,580              -   +22.6 %
-Prices include each country's VAT. CNB rate 30.10.2026: 1 EUR = 24.360 CZK.
-```
+<p align="center">
+  <img src="docs/screenshot-en.png" alt="Alzator table comparing the Samsung Galaxy S26 Ultra on five Alza shops" width="560">
+</p>
+
+<details>
+<summary>Czech version (follows your browser language)</summary>
+<p align="center">
+  <img src="docs/screenshot-cs.png" alt="Alzator v češtině" width="560">
+</p>
+</details>
+
+<sub>Sample prices of the Samsung Galaxy S26 Ultra 12GB/512GB Black on 2 Nov 2026. The German version is 22 % cheaper than the Czech AlzaPlus+ price.</sub>
 
 ## Features
 
@@ -71,7 +87,7 @@ Product pages are cached for 10 minutes and exchange rates for 6 hours.
 
 ## Development
 
-No build step and no dependencies. Edit the files and reload the extension.
+No build step, and the extension has no dependencies. Edit the files and reload the extension.
 
 ```
 src/parse.js        pure parsing helpers (prices, codes, CNB rates)
@@ -83,7 +99,10 @@ test/               unit tests (node:test)
 
 ```
 npm run check       # syntax check + unit tests
+npm run assets      # re-render README images and icons (needs `npm install` and Chrome)
 ```
+
+The screenshots are rendered from the real `src/content.js` with sample data, so they always match the current UI.
 
 ## License
 
