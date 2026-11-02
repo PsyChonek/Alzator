@@ -35,7 +35,7 @@ export function parseOffer(html) {
       if (node?.['@type'] !== 'Product' || !node.offers) continue;
       const offer = [node.offers].flat()[0];
       const price = Number(offer.price ?? offer.lowPrice);
-      if (!Number.isFinite(price)) continue;
+      if (!Number.isFinite(price) || !/^[A-Z]{3}$/.test(offer.priceCurrency ?? '')) continue;
       return {
         name: node.name ?? null,
         price,
@@ -65,6 +65,15 @@ export function parseCnbRates(text) {
 }
 
 export function toCzk(price, currency, rates) {
-  const rate = rates[currency];
-  return rate ? price * rate : null;
+  return Object.hasOwn(rates, currency) ? price * rates[currency] : null;
+}
+
+// Only https links on the shop that was fetched are trusted as the product link.
+export function safeShopUrl(candidate, host, fallback) {
+  try {
+    const url = new URL(candidate, fallback);
+    return url.protocol === 'https:' && url.host === host ? url.href : fallback;
+  } catch {
+    return fallback;
+  }
 }

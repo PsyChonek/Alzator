@@ -1,4 +1,4 @@
-import { SHOPS, extractProductId, productUrl, parseOffer, parseCnbRates, toCzk } from './parse.js';
+import { SHOPS, extractProductId, productUrl, parseOffer, parseCnbRates, toCzk, safeShopUrl } from './parse.js';
 
 const CNB_URL =
   'https://www.cnb.cz/cs/financni-trhy/devizovy-trh/kurzy-devizoveho-trhu/kurzy-devizoveho-trhu/denni_kurz.txt';
@@ -31,7 +31,7 @@ async function fetchShop(shop, productId) {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       return parseOffer(await res.text());
     });
-    return { ...shop, url: offer?.url ?? url, offer, error: null };
+    return { ...shop, url: safeShopUrl(offer?.url, shop.host, url), offer, error: null };
   } catch (err) {
     return { ...shop, url, offer: null, error: String(err.message ?? err) };
   }
