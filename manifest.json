@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "description": "__MSG_extDescription__",
+  "version": "0.1.0",
+  "default_locale": "cs",
+  "background": {
+    "service_worker": "src/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.alza.cz/*",
+        "https://www.alza.sk/*",
+        "https://www.alza.de/*",
+        "https://www.alza.at/*",
+        "https://www.alza.hu/*"
+      ],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": ["storage"],
+  "host_permissions": [
+    "https://www.alza.cz/*",
+    "https://www.alza.sk/*",
+    "https://www.alza.de/*",
+    "https://www.alza.at/*",
+    "https://www.alza.hu/*",
+    "https://www.cnb.cz/*"
+  ]
+}

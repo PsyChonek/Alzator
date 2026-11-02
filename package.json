@@ -1,0 +1,12 @@
+{
+  "name": "alzator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Chrome extension comparing Alza prices across country shops in CZK",
+  "type": "module",
+  "scripts": {
+    "check": "node --check src/content.js && node --check src/background.js && node --test",
+    "test": "node --test"
+  },
+  "license": "MIT"
+}

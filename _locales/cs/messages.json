@@ -1,0 +1,19 @@
+{
+  "extName": { "message": "Alzator - srovnání cen Alza" },
+  "extDescription": { "message": "Porovná cenu produktu napříč Alza.cz, .sk, .de, .at a .hu, přepočteno na Kč kurzem ČNB." },
+  "title": { "message": "Cena na ostatních Alzách" },
+  "loading": { "message": "Načítám ceny..." },
+  "unavailable": { "message": "neprodává se" },
+  "outOfStock": { "message": "není skladem" },
+  "error": { "message": "nepodařilo se načíst" },
+  "colShop": { "message": "Obchod" },
+  "colLocal": { "message": "Místní cena" },
+  "colCzk": { "message": "V Kč" },
+  "colDiff": { "message": "Rozdíl" },
+  "vatNote": { "message": "Ceny vč. DPH dané země." },
+  "rateNote": {
+    "message": "Kurz ČNB $DATE$: 1 EUR = $RATE$ Kč.",
+    "placeholders": { "date": { "content": "$1" }, "rate": { "content": "$2" } }
+  },
+  "rateMissing": { "message": "Kurz ČNB se nepodařilo načíst." }
+}

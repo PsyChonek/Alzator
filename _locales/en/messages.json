@@ -1,0 +1,19 @@
+{
+  "extName": { "message": "Alzator - Alza price comparison" },
+  "extDescription": { "message": "Compares a product's price across Alza.cz, .sk, .de, .at and .hu, converted to CZK at the CNB rate." },
+  "title": { "message": "Price on other Alza shops" },
+  "loading": { "message": "Loading prices..." },
+  "unavailable": { "message": "not sold" },
+  "outOfStock": { "message": "out of stock" },
+  "error": { "message": "failed to load" },
+  "colShop": { "message": "Shop" },
+  "colLocal": { "message": "Local price" },
+  "colCzk": { "message": "In CZK" },
+  "colDiff": { "message": "Diff" },
+  "vatNote": { "message": "Prices include each country's VAT." },
+  "rateNote": {
+    "message": "CNB rate $DATE$: 1 EUR = $RATE$ CZK.",
+    "placeholders": { "date": { "content": "$1" }, "rate": { "content": "$2" } }
+  },
+  "rateMissing": { "message": "Could not load the CNB rate." }
+}
