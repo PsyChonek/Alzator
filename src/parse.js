@@ -70,6 +70,7 @@ export function toCzk(price, currency, rates) {
 
 // Only https links on the shop that was fetched are trusted as the product link.
 export function safeShopUrl(candidate, host, fallback) {
+  if (typeof candidate !== 'string' || !candidate) return fallback;
   try {
     const url = new URL(candidate, fallback);
     return url.protocol === 'https:' && url.host === host ? url.href : fallback;
