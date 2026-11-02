@@ -5,12 +5,14 @@
   "loading": { "message": "Načítám ceny..." },
   "unavailable": { "message": "neprodává se" },
   "outOfStock": { "message": "není skladem" },
+  "variant": { "message": "regionální varianta" },
   "error": { "message": "nepodařilo se načíst" },
   "colShop": { "message": "Obchod" },
-  "colLocal": { "message": "Místní cena" },
-  "colCzk": { "message": "V Kč" },
+  "colAnon": { "message": "Anonymně" },
+  "colMine": { "message": "Moje cena" },
+  "colAlzaPlus": { "message": "S AlzaPlus+" },
   "colDiff": { "message": "Rozdíl" },
-  "vatNote": { "message": "Ceny vč. DPH dané země." },
+  "vatNote": { "message": "Ceny vč. DPH dané země. Moje cena podle vašeho přihlášení na dané Alze." },
   "rateNote": {
     "message": "Kurz ČNB $DATE$: 1 EUR = $RATE$ Kč.",
     "placeholders": { "date": { "content": "$1" }, "rate": { "content": "$2" } }

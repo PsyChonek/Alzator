@@ -5,12 +5,14 @@
   "loading": { "message": "Loading prices..." },
   "unavailable": { "message": "not sold" },
   "outOfStock": { "message": "out of stock" },
+  "variant": { "message": "regional variant" },
   "error": { "message": "failed to load" },
   "colShop": { "message": "Shop" },
-  "colLocal": { "message": "Local price" },
-  "colCzk": { "message": "In CZK" },
+  "colAnon": { "message": "Anonymous" },
+  "colMine": { "message": "My price" },
+  "colAlzaPlus": { "message": "With AlzaPlus+" },
   "colDiff": { "message": "Diff" },
-  "vatNote": { "message": "Prices include each country's VAT." },
+  "vatNote": { "message": "Prices include each country's VAT. My price is based on your login on each Alza shop." },
   "rateNote": {
     "message": "CNB rate $DATE$: 1 EUR = $RATE$ CZK.",
     "placeholders": { "date": { "content": "$1" }, "rate": { "content": "$2" } }
